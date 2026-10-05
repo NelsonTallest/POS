@@ -1,0 +1,141 @@
+:root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-border: #2a2e38;
+    --text: #e6e8ec;
+    --text-dim: #9aa1ad;
+    --accent: #5b8cff;
+    --low: #4caf7d;
+    --medium: #e0a53a;
+    --high: #e0543a;
+    --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.app-header {
+    padding: 2rem 1.5rem 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.app-header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; }
+.subtitle { color: var(--text-dim); margin: 0; }
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+}
+
+.panel h2 { margin-top: 0; font-size: 1.1rem; }
+.panel h3 { font-size: 0.95rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; margin: 1.5rem 0 0.5rem; }
+
+#upload-form { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+
+input[type="file"] {
+    color: var(--text);
+    flex: 1;
+    min-width: 200px;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+button:disabled { opacity: 0.6; cursor: default; }
+button:hover:not(:disabled) { filter: brightness(1.1); }
+
+.status { color: var(--text-dim); min-height: 1.2em; margin: 0.75rem 0 0; }
+.status.error { color: var(--high); }
+
+.summary {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+.summary strong { color: var(--text); }
+
+.table-wrap { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+th { color: var(--text-dim); font-weight: 600; }
+tr:hover td { background: rgba(255, 255, 255, 0.02); }
+.clickable-row { cursor: pointer; }
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.badge-LOW { background: rgba(76, 175, 125, 0.15); color: var(--low); }
+.badge-MEDIUM { background: rgba(224, 165, 58, 0.15); color: var(--medium); }
+.badge-HIGH { background: rgba(224, 84, 58, 0.15); color: var(--high); }
+
+.type-pill {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(91, 140, 255, 0.15);
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+.issues-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.issue-item {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+}
+.issue-column { color: var(--text-dim); font-size: 0.8rem; min-width: 110px; }
+.issue-message { flex: 1; }
+.empty-note { color: var(--text-dim); font-style: italic; }
+
+.suggestions-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.suggestion-card {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+}
+.suggestion-card h4 { margin: 0 0 0.25rem; font-size: 1rem; display: flex; justify-content: space-between; align-items: center; }
+.suggestion-card p { margin: 0.25rem 0; color: var(--text-dim); font-size: 0.9rem; }
+.suggestion-card .caveat { color: var(--medium); font-size: 0.85rem; }
+
+.warnings { color: var(--text-dim); font-size: 0.85rem; margin-top: 1rem; }
+
+.confidence-LOW { color: var(--high); }
+.confidence-MEDIUM { color: var(--medium); }
+.confidence-HIGH { color: var(--low); }

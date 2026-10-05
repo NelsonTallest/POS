@@ -1,0 +1,10 @@
+[
+  {"order_id": "A1001", "customer": "Alice", "amount": 120.5, "paid": true, "address": {"city": "London", "zip": "E1 6AN"}},
+  {"order_id": "A1002", "customer": "Bob", "amount": 75, "paid": true, "address": {"city": "Leeds", "zip": "LS1 4AP"}},
+  {"order_id": "A1003", "customer": "Charlie", "amount": "unknown", "paid": false, "address": {"city": "London", "zip": "E1 6AN"}},
+  {"order_id": "A1004", "customer": "Dana", "amount": 60.0, "paid": true, "address": {"city": "Leeds", "zip": "LS1 4AP"}},
+  {"order_id": "A1005", "customer": "Eve", "amount": 85000.0, "paid": true, "address": {"city": "Bristol", "zip": "BS1 1AA"}},
+  {"order_id": "A1006", "customer": "Frank", "amount": 42.25, "paid": true, "tags": ["sale", "clearance"]},
+  {"order_id": "A1007", "customer": "Grace", "amount": 55.0, "paid": true, "address": {"city": "London", "zip": "E1 6AN"}},
+  {"order_id": "A1008", "customer": "Heidi", "amount": 61.0, "paid": false, "address": {"city": "Leeds", "zip": "LS1 4AP"}}
+]
